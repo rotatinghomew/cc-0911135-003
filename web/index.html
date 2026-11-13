@@ -1,0 +1,6 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8"><title>表型中心材料门户</title>
+<style>body{font-family:sans-serif;margin:24px}#viewport{height:240px;overflow:auto;border:1px solid #888}table{width:100%}td{height:34px}label{margin:10px}#login{padding:10px}</style>
+<h1>共享材料</h1><form id="login"><label>账号<input name="username" value="reader"></label><label>口令<input name="password" type="password" value="local-reader"></label><button>登录</button></form>
+<div id="workspace" hidden><label>样本部位<select id="filter"><option value="grain">籽粒</option><option value="tip">生长点</option></select></label>
+<button id="refresh">刷新本屏</button><p id="identity"></p><div id="viewport"><div id="space"><div id="screen"><table><thead><tr id="headers"></tr></thead><tbody id="rows"></tbody></table><p id="end"></p></div></div></div>
+<aside id="detail" aria-live="polite"></aside></div><p id="message" role="status"></p><script type="module" src="/app.js"></script></html>
