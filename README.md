@@ -8,6 +8,8 @@ Node.js 22.23.4，依赖使用 package-lock.json 固定。准备阶段运行 `np
 准备浏览器环境时执行 `npx playwright install chromium`，或复用已安装且版本相符的 Chromium。运行阶段不下载浏览器。
 浏览器页面回归：`npm run test:browser`。
 
+独立的 Linux 页面运行检查还使用 Python Playwright，其完整依赖固定在 `requirements-verification.txt`，不参与 Node.js 业务实现。准备阶段在检查器使用的 Python 虚拟环境中执行 `python3 -m pip install -r requirements-verification.txt`，并执行 `python3 -m playwright install chromium`；不能仅安装 npm 包而遗漏该虚拟环境。项目环境准备工具会按这些清单预装两套绑定及对应浏览器，运行构建、测试、服务或演练时不再安装依赖。
+
 ```bash
 npm run build
 npm test
