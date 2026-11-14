@@ -13,7 +13,8 @@
     "test": "node --test test/*.test.mjs",
     "demo": "node tools/demo.mjs",
     "verify": "node test/verify.mjs",
-    "test:browser": "node --test browser/*.test.mjs"
+    "test:browser": "node --test browser/*.test.mjs",
+    "collect": "node tools/collect.mjs"
   },
   "devDependencies": {
     "playwright": "1.56.1"
